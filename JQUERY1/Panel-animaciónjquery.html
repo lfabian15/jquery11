@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PANEL-ANIMACION-JQUERY</title>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"><!--mce:0--></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+<script>
+	$(document).ready(function(){
+    $("button").click(function(){
+        var div = $("div");
+        div.animate({height:'300px', opacity:'0.4'}, "slow");
+        div.animate({width:'300px', opacity:'0.8'}, "slow");
+        div.animate({height:'100px', opacity:'0.4'}, "slow");
+        div.animate({width:'100px', opacity:'0.8'}, "slow");
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: red;
+    border: solid 1px #c5c5c5;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+.bt{
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip"><b>"TOCA PARA DESLIZAR EL PANEL"</b></div>
+<div id="panel"><b>¡QUE INICIE LA ANIMACIÓN!</b> <br><button class="bt"><b>EMPEZAR</b></button></div>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<title>demo addclass</title>
+	<style>
+		p{
+			margin: 8px;
+			font-size: 16px;
+		}
+		.selected{
+			color: blue;
+		}
+		.highlight{
+			background: red;
+		}
+
+		div{
+			background:white;
+		}
+		.red{
+			background:red;
+		}
+		.red.green{
+			background: green;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+	<!--<p>hola</p>
+	<p>y</p>
+	<p>adios</p>-->
+
+	<!--<script>
+		$("p").last().addClass("selected");-->
+
+
+		<!--$("p:last").addClass("selected highlight");-->
+	</script>-->
+
+
+	<div>Estediv debe ser blanco</div>
+	<div class="red"> Este div sera verde porque ahora tiene las clases</div>
+	<div>este div debe ser blanco</div>
+	<p>there are zero green divs</p>
+
+	<script>
+		$("div").addClass(function(index, currentClass){
+			var addedClass;
+
+			if (currentClass ==="red") {
+				addedClass = "green";
+				$("p").text("hay un div en verde");
+			}
+			return addedClass;
+		});
+	</script>
+	
+</body>
+</html>

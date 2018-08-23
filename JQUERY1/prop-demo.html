@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>prop demo</title>
+	<style>
+		p{
+			margin: 20px 0 0;
+			}
+		b{
+			color: blue;
+		}
+	</style>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<input  id="check1" type="checkbox" checked="checked">
+	<label for="check1">¿Quien descubrío América?</label>
+	<p></p>
+
+	<script>
+		$("input").change(function(){
+			var $input = $(this);
+			$("p").html(
+				"1 Hernan Cortes <b>" +$input.is("checked") +  "</b><br>"+
+				"2 Cristobal Colón: <b>" + $input.prop("checked") + "</b><br>"+
+				"3 Miguel Hidalgo<b>" + $input.is("checked")+ "</b><br>");
+		}).change();
+	</script>
+	
+</body>
+</html>
